@@ -1,0 +1,15 @@
+pritunl:
+  image: shomatan/pritunl:latest-centos7
+  command: /docker-entrypoint.sh
+  privileged: true
+  links:
+    - db
+  ports:
+    - 443:443
+    - 9700:9700
+    - 12249:12249/udp
+  restart: always
+
+db:
+  image: mongo
+  restart: always
