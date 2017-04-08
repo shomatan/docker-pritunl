@@ -18,4 +18,4 @@
       template:
         src: docker-entrypoint.sh.j2
         dest: /docker-entrypoint.sh
-        mode: 0755  
+        mode: 0755
